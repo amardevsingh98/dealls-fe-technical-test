@@ -210,7 +210,7 @@ export default function ProductSection({ products }: { products: ProductState })
       </h2>
 
 
-      <div className="flex flex-col md:flex-row gap-10 flex-wrap max-w-full">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-20 flex-wrap max-w-full">
         <div className="max-w-full md:min-w-[60%]">
           <DataTable
             columns={columns} 
@@ -222,7 +222,7 @@ export default function ProductSection({ products }: { products: ProductState })
             })}
           />
         </div>
-        <div className="lg:ml-12">
+        <div>
           <h2 className="mb-2 text-xl font-semibold">Product Chart</h2>
           <h3 className="text-gray-400 text-md mb-10">
             Chart representation of products based on applied filters

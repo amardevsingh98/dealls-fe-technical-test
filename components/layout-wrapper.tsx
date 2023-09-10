@@ -33,8 +33,10 @@ export default function LayoutWrapper({ children, headers }: { children: React.R
       { isMobile ? (<Header />) : null }
 
       <main className={mainClass.join(' ')}>
-        <div className='flex'>
-          { !isMobile ? (<SideBar className='border-r-2 w-64 h-screen'/>) : null }
+        <div className='flex w-full relative'>
+          <div className='relative'>
+            { !isMobile ? (<SideBar className='border-r-2 w-60 sticky top-0 h-[100vh]'/>) : null }
+          </div>
           <div className='w-full pt-4 px-6'>
             {children}  
           </div>
