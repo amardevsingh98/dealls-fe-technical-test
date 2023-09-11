@@ -41,7 +41,7 @@ export function SearchFilter({ search, className, onChange, formatter, placehold
 
   return (
     <div className={cn(className, 'flex items-center space-x-2')}>
-      <Input type="text" placeholder={placeholder} value={searchValue} onChange={(e) => onSearchValueChange(e.target.value)} onKeyDown={onKeyEnterCheck} />
+      <Input type="text" placeholder={placeholder} value={searchValue} onChange={(e) => onSearchValueChange(e.target.value)} onKeyDown={onKeyEnterCheck} onBlur={onClickSearchButton} />
       {
         !hideSearchButton ? <Button onClick={onClickSearchButton}>Search</Button> : null
       }
